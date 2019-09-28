@@ -5,4 +5,5 @@ import br.com.rsi.transactionapi.entity.Conta;
 public class ContaDao extends BaseDAOImpl<Conta>{
 
 
+
 }
