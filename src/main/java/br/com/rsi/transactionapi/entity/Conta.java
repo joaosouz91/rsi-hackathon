@@ -17,4 +17,8 @@ public class Conta implements BaseEntity{
     private String cpf;
     private BigDecimal saldo;
 
+    public void alteraSaldo(BigDecimal valor){
+        this.saldo = this.saldo.add(valor);
+    }
+
 }

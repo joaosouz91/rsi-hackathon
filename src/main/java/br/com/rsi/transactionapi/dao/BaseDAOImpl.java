@@ -2,11 +2,14 @@ package br.com.rsi.transactionapi.dao;
 
 import br.com.rsi.transactionapi.connection.ConnectionFactory;
 import br.com.rsi.transactionapi.entity.BaseEntity;
+import org.springframework.stereotype.Repository;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
 
+@Repository
 public class BaseDAOImpl<T extends BaseEntity> implements DAOInterface<T> {
 
     public BaseDAOImpl(){}

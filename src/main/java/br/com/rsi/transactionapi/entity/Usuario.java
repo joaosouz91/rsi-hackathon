@@ -1,5 +1,6 @@
 package br.com.rsi.transactionapi.entity;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import java.sql.Date;
 @Setter
 @EqualsAndHashCode
 @AllArgsConstructor
-public class Usuario {
+public class Usuario implements BaseEntity {
 
     private Integer id;
     private String nome;
