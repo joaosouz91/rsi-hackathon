@@ -1,8 +1,9 @@
-package br.com.rsi.transactionservice.controller;
+package br.com.rsi.transactionapi.controller;
 
 
-import br.com.rsi.transactionservice.entity.Conta;
-import br.com.rsi.transactionservice.entity.Login;
+import br.com.rsi.transactionapi.entity.Conta;
+import br.com.rsi.transactionapi.entity.Login;
+import br.com.rsi.transactionapi.security.AccountCredentials;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @Slf4j
 @RestController
@@ -27,7 +26,7 @@ public class TransactionServiceController {
 
     //usuario
     @PostMapping("/usuario/login")
-    public ResponseEntity<String> login(@RequestBody Login login) {
+    public ResponseEntity<String> login(@RequestBody AccountCredentials accountCredentials) {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
@@ -39,6 +38,9 @@ public class TransactionServiceController {
     //conta
     @PostMapping("/conta")
     public ResponseEntity criarConta(@RequestBody Conta conta) {
+
+
+
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 

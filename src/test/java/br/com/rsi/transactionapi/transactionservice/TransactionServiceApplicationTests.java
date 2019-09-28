@@ -1,4 +1,4 @@
-package br.com.rsi.transactionservice.transactionservice;
+package br.com.rsi.transactionapi.transactionservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

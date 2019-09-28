@@ -1,0 +1,37 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+		http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <!-- unidade de persistencia com o nome financas -->
+    <persistence-unit name="hackathon">
+
+        <!-- Implementação do JPA, no nosso caso Hibernate -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!--entidades -->
+        <class>br.com.rsi.transactionapi.entity.Conta</class>
+        <class>br.com.rsi.transactionapi.entity.Extrato</class>
+        <class>br.com.rsi.transactionapi.entity.Login</class>
+        <class>br.com.rsi.transactionapi.entity.Usuario</class>
+
+        <properties>
+
+            <!-- Propriedades JDBC -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://b178eb15e1a17f:2ee50c6b@us-cdbr-iron-east-02.cleardb.net/heroku_d019b8c470d98df?reconnect=true" />
+            <property name="javax.persistence.jdbc.user" value="admin" />
+            <property name="javax.persistence.jdbc.password" value="San4648000$" />
+
+            <!-- Configurações específicas do Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+    </persistence-unit>
+
+
+
+</persistence>

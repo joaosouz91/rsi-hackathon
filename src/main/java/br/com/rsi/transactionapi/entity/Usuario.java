@@ -1,4 +1,4 @@
-package br.com.rsi.transactionservice.entity;
+package br.com.rsi.transactionapi.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
